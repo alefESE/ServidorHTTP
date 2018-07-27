@@ -13,7 +13,7 @@ import com.ufpb.core.handlers.Handler;
 
 public class Conexao implements Runnable {
     private final Socket sock;
-    private String metodo, urn, versao, host;
+    private String metodo, urn, versao;
     private static Logger log = Logger.getLogger(Conexao.class.getName());
 
     public Conexao(Socket sock) {
@@ -25,9 +25,7 @@ public class Conexao implements Runnable {
         try {
             Map<String, String> headers = parseHttpHeaders();
 
-            host = headers.get("Host");
-
-            new Handler(sock, metodo, urn, host).executa();
+            new Handler(sock, metodo, urn, versao, headers).executa();
 		} catch (IOException e) {
 			log.severe(e.getMessage());
 		} finally {

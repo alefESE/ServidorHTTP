@@ -1,4 +1,4 @@
-package com.ufpb.core.util;
+package com.ufpb.core.handlers.commands;
 
 public enum Status {
     CONTINUE(100, "Continue"), SWITCHING_PROTOCOLS(101, "Switching Protocols"),

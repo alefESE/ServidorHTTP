@@ -3,12 +3,18 @@ package com.ufpb.core.util;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.ufpb.core.handlers.commands.Status;
+
 public class HttpResponseBuilder {
 
-    private String statusline = new String();
-    private Map<String, String> headers = new HashMap<>();
+    private String statusline;
+    private Map<String, String> headers;
     private String payload;
+    
     public HttpResponseBuilder() {
+        statusline =  new String();
+        headers = new HashMap<>();
+        payload = new String();
         statusline = String.format("HTTP/1.1 %s\r\n", Status.OK.toString());
     }
 

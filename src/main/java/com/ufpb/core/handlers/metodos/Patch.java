@@ -1,8 +1,8 @@
-package com.ufpb.core.handlers;
+package com.ufpb.core.handlers.metodos;
 
 import java.net.Socket;
 
-public class Patch implements Estrategia {
+public class Patch extends Estrategia {
 
     public Patch(Socket sock, String urn) {
 

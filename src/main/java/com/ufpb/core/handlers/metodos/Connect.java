@@ -1,8 +1,8 @@
-package com.ufpb.core.handlers;
+package com.ufpb.core.handlers.metodos;
 
 import java.net.Socket;
 
-public class Connect implements Estrategia {
+public class Connect extends Estrategia {
     public Connect(Socket sock, String host) {
 
     }

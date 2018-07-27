@@ -1,8 +1,8 @@
-package com.ufpb.core.handlers;
+package com.ufpb.core.handlers.metodos;
 
 import java.net.Socket;
 
-public class Options implements Estrategia {
+public class Options extends Estrategia {
 
     public Options(Socket sock, String host) {
 
