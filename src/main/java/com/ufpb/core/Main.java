@@ -12,6 +12,7 @@ public class Main {
             System.out.println("Uso: http <porta> <porta> <...>");
             System.exit(-1);
         }
+        //por enquanto virtual hosting sem DNS
         List<Servidor> servidores = new ArrayList<>();
         for(String porta: args) 
             servidores.add(new Servidor(Integer.parseInt(porta)));

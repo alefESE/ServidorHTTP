@@ -12,7 +12,11 @@ public class Ok extends HttpCommand {
 	private final String host, urn;
 	public Ok(String host, String urn, OutputStream os) {
 		super(os);
-		this.host = host;
+		//TODO: pensar numa maneira de contextualizar navegacao
+		if(host.contentEquals("/")) //pega o index do contexto
+			this.host = "/index.html";
+		else
+			this.host = host;
 		this.urn = urn;
 	}
 
