@@ -15,7 +15,7 @@ public class Ok extends HttpCommand {
 		this.host = host;
 		//TODO: pensar numa maneira de contextualizar navegacao
 		if(urn.contentEquals("/")) //pega o index do contexto
-			this.urn = urn;
+			this.urn = "/index.html";
 		else
 			this.urn = urn;
 	}
